@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+nav span {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #F7F4E9;
+  height: 30vh;
+  padding-bottom: 5vh;
+}
+header img {
+  width: 70vw;
+  align-self: center;
+}
+h1 {
+  align-self: center;
+  font-size: 1.8em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color:#709791
+}
+
+nav {
+  position: sticky;
+  box-shadow: 6px 6px 6px 6px rgba(0.2, 0, 0, 0.2);
+}
+.menuBurger {
+  font-size: 30px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 2px 0px 2px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+}
