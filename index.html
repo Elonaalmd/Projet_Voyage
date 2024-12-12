@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site voyage</title>
-    <link rel="stylesheet" href="Assets/css/style.css">
-</head>
-<body>
-    
-</body>
-<script src="Assets/js/script.js"></script>
+    <link rel="stylesheet" href="Assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span class="menuBurger" onclick="openNav()">&#9776;</span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">Destinations Phares</a>
+          <a href="#">Galerie</a>
+          <a href="#">Témoignage</a>
+          <a href="#">Devis</a>
+        </div>
+      </nav>
+      <img src="Assets/img/Logo_Evasion_et_Decouverte.png" alt="Logo Evasion et découverte" />
+      <h1>Bienvenue sur notre site !</h1>
+    </header>
+    <footer>
+      <a href="https://maps.app.goo.gl/2BCBbo7Bd2hjCo2y8">31 rue Irène Joliot Curie</a>
+      <a href="#">07 30 20 27 28</a>
+      <a href="#">evasion.decouverte@gmail.com</a>
+      <span>Du Lundi au Vendredi de 8h à 18h</span>
+      <div class="reseaux">
+        <a href="https://fr-fr.facebook.com/LaManuFormation/"><img src="Assets/img/facebook.png" alt="logo facebook" /></a>
+        <a href="https://www.instagram.com/lamanuformation/"><img src="Assets/img/instagram.png" alt="logo instagram" /></a>
+        <a href="https://www.tiktok.com/@lamanuformation?lang=fr"><img src="Assets/img/tic-tac.png" alt="logo tiktok" /></a>
+        <a href="https://twitter.com/lamanuformation"><img src="Assets/img/twitter.png" alt="logo twitter" /></a>
+      </div>
+      <div class="mentions">
+        <span>crédit</span>
+        <span>Mentions légales</span>
+      </div>
+    </footer>
+    <script src="Assets/js/script.js"></script>
+  </body>
 </html>
