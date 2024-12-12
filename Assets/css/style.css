@@ -1,0 +1,222 @@
+/* Réinitialisation des marges et des paddings par défaut de tous les éléments */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section destinations phares */
+
+/* Mobile first */
+
+/* Style de la section principale (textes en blanc sur fond sombre) */
+main {
+  color: #f7f4e9;
+}
+
+/* Styles communs pour les titres de sections */
+.title_section,
+.title_section2 {
+  margin-top: 30px;
+  color: #f7f4e9;
+  padding: 5px;
+  background-color: #2f2f2f; /* Fond sombre pour le contraste */
+  border-radius: 30px;
+  border: 3px solid #f7f4e9;
+}
+
+/* Styles de la section des destinations phares */
+#destinations_phares {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de s'ajuster selon la taille de l'écran */
+  justify-content: center;
+  gap: 50px; /* Espacement entre les cartes */
+  background-color: #709791; /* Couleur de fond */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Styles pour le bouton dans la carte */
+.card_content button {
+  background-color: #e7c79b; /* Couleur de fond du bouton */
+  padding: 8px;
+  border-radius: 30px;
+  margin-top: 10%;
+}
+
+/* Style de base des cartes de destination */
+.card {
+  background-color: #0c5655; /* Fond de carte */
+  opacity: 100%;
+  border-radius: 8%;
+  color: white;
+  max-width: 300px; /* Largeur maximale de la carte */
+  transition: 0.3s; /* Transition pour les effets de survol */
+}
+
+/* Style de l'image de la carte */
+.card_img img {
+  width: 100%; /* L'image occupe toute la largeur du conteneur */
+  border-radius: 8%;
+  max-height: 200px;
+  max-width: 300px;
+}
+
+/* Contenu de la carte (titre et description) */
+.card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+
+/* Espacement sous le titre dans la carte */
+.card_content h3 {
+  padding-bottom: 8%;
+}
+
+/* Menu des activités par défaut invisible */
+.menu_activity {
+  display: none;
+}
+
+/* Affichage du menu des activités quand la classe 'active' est ajoutée */
+.menu_activity.active {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+/* Styles pour les écrans plus larges (ordinateurs) */
+
+/* Lorsque l'écran fait 1024px ou plus */
+@media (min-width: 1024px) {
+
+  /* L'image de la carte devient plus grande sur les grands écrans */
+  .card_img img {
+    max-height: 200px;
+    max-width: 500px;
+  }
+
+  /* Effet au survol d'une carte (changement de couleur de fond) */
+  .card:hover {
+    background-color: #2f2f2f;
+  }
+
+  /* Disposition des cartes en grille pour les écrans plus larges */
+  #destinations_phares {
+    grid-area: b;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    grid-gap: 30px;
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "c c c";
+  }
+
+  /* Le titre de section occupe toute la largeur de la grille */
+  .title_section {
+    grid-area: a;
+    grid-column: span 3;
+    margin: 0 auto;
+  }
+
+  /* Style des cartes dans la grille */
+  .card {
+    max-width: 500px;
+    max-height: 800px;
+  }
+
+  /* Répétition du style de titre de section */
+  .title_section {
+    grid-area: a;
+  }
+}
+
+/* Section galerie photo */
+
+/* Espacement sous le titre de la galerie */
+.title_section2 {
+  margin-bottom: 40px;
+}
+
+/* Conteneur principal de la galerie avec un fond différent */
+#galerie_photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7c79b; /* Fond beige clair */
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-top: 70px;
+}
+
+/* Conteneur de la galerie */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Titre de la galerie, centrage du texte */
+.gallery-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Disposition en grille pour les éléments de la galerie */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Par défaut, une seule colonne sur mobile */
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur de la galerie */
+  margin: 0 auto;
+}
+
+/* Style de chaque élément de la galerie */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet d'agrandissement des images au survol */
+.gallery-item:hover {
+  transform: scale(1.05); /* Agrandit l'élément */
+}
+
+/* Style des images de la galerie */
+.gallery-item img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover; /* Recadrage de l'image pour remplir le conteneur */
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* Effet de changement d'opacité au survol de l'image */
+.gallery-item img:hover {
+  opacity: 0.8; /* Légère transparence au survol */
+}
+
+/* Styles pour les grands écrans (desktop) */
+
+/* Lorsque l'écran fait 1024px ou plus */
+@media (min-width: 1024px) {
+  /* Disposition en grille avec trois colonnes pour les grands écrans */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Limite la taille des éléments de la galerie */
+  .gallery-item {
+    max-width: 500px;
+  }
+}

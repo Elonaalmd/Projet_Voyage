@@ -1,13 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site voyage</title>
-    <link rel="stylesheet" href="Assets/css/style.css">
-</head>
-<body>
+  <head>
+    <!-- Déclaration de l'encodage des caractères (UTF-8) pour un affichage correct -->
+    <meta charset="UTF-8" />
     
-</body>
-<script src="Assets/js/script.js"></script>
+    <!-- Pour une meilleure expérience mobile, cette ligne permet d'ajuster la largeur de la page en fonction de la taille de l'écran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <title>Site voyage</title>
+    
+    <!-- Lien vers le fichier CSS externe pour la mise en forme de la page -->
+    <link rel="stylesheet" href="Assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Section principale des destinations phares -->
+      <section id="destinations_phares">
+        <!-- Titre de la section -->
+        <h2 class="title_section">Destinations Phares</h2>
+
+        <!-- Première carte de destination (Barcelone) -->
+        <div class="card">
+          <div class="card_img">
+            <!-- Image de Barcelone -->
+            <img src="Assets/img/img_barcelone.jpeg" alt="Image de Barcelone" />
+          </div>
+          <div class="card_content">
+            <!-- Titre de la destination -->
+            <h3>Barcelone</h3>
+            <p>
+              Plongez dans l’ambiance vibrante de Barcelone, la perle de la Méditerranée. Laissez-vous séduire par ses plages dorées, ses rues animées et son patrimoine unique. De la fascinante Sagrada Família aux ruelles historiques du quartier gothique, chaque instant est une découverte. Savourez des tapas authentiques, explorez le parc Güell et vibrez au rythme des soirées catalanes.
+            </p>
+            <!-- Liste des activités disponibles à Barcelone -->
+            <ul class="menu_activity" id="menu_activity_1">
+              <li>Visiter la Sagrada Família</li>
+              <li>Se promener dans le parc Güell</li>
+              <li>Explorer le quartier gothique</li>
+              <li>Se détendre sur les plages de Barcelone</li>
+              <li>Découvrir le marché de la Boqueria</li>
+            </ul>
+            <!-- Bouton pour voir les activités -->
+            <button id="card_content_btn_1">Voir Activités</button>
+          </div>
+        </div>
+
+        <!-- Deuxième carte de destination (New York) -->
+        <div class="card">
+          <div class="card_img">
+            <!-- Image de New York -->
+            <img src="Assets/img/img_new_york.jpeg" alt="Image de New York" />
+          </div>
+          <div class="card_content">
+            <!-- Titre de la destination -->
+            <h3>New York</h3>
+            <p>
+              Plongez au cœur de la ville qui ne dort jamais et laissez-vous emporter par son énergie unique. Admirez les gratte-ciels de Manhattan, promenez-vous dans le paisible Central Park et ressentez l’effervescence de Times Square. Montez au sommet de l’Empire State Building pour une vue à couper le souffle et partez en croisière pour saluer la célèbre Statue de la Liberté. Entre culture, shopping et découvertes culinaires, New York vous promet une expérience inoubliable.
+            </p>
+            <!-- Liste des activités disponibles à New York -->
+            <ul class="menu_activity" id="menu_activity_2">
+              <li>Monter au sommet de l’Empire State Building</li>
+              <li>Se promener dans Central Park</li>
+              <li>Explorer Times Square</li>
+              <li>Visiter le musée du 11 septembre</li>
+              <li>Faire une croisière vers la Statue de la Liberté et Ellis Island</li>
+            </ul>
+            <!-- Bouton pour voir les activités -->
+            <button id="card_content_btn_2">Voir Activités</button>
+          </div>
+        </div>
+
+        <!-- Troisième carte de destination (Tokyo) -->
+        <div class="card">
+          <div class="card_img">
+            <!-- Image de Tokyo -->
+            <img src="Assets/img/img_tokyo.jpeg" alt="Image de Tokyo" />
+          </div>
+          <div class="card_content">
+            <!-- Titre de la destination -->
+            <h3>Tokyo</h3>
+            <p>
+              Entrez dans un monde où traditions anciennes et modernité futuriste coexistent harmonieusement. Explorez le majestueux temple Sensō-ji à Asakusa, déambulez sous les néons éclatants de Shibuya et traversez son célèbre carrefour. Plongez dans l’atmosphère paisible des jardins de Meiji-jingū, puis émerveillez-vous devant les gratte-ciels de Shinjuku. Ne manquez pas de goûter aux délices culinaires japonais, des sushis frais aux délicieux ramens.
+            </p>
+            <!-- Liste des activités disponibles à Tokyo -->
+            <ul class="menu_activity" id="menu_activity_3">
+              <li>Visiter le temple Sensō-ji à Asakusa</li>
+              <li>Traverser le carrefour de Shibuya</li>
+              <li>Explorer le quartier d’Akihabara</li>
+              <li>Admirer la vue depuis la Tokyo Skytree</li>
+              <li>Se détendre dans les jardins de Meiji-jingū</li>
+            </ul>
+            <!-- Bouton pour voir les activités -->
+            <button id="card_content_btn_3">Voir Activités</button>
+          </div>
+        </div>
+
+        <!-- Quatrième carte de destination (Le Caire) -->
+        <div class="card">
+          <div class="card_img">
+            <!-- Image du Caire -->
+            <img src="Assets/img/img_le_caire.jpg" alt="Image de Le Caire" />
+          </div>
+          <div class="card_content">
+            <!-- Titre de la destination -->
+            <h3>Le Caire</h3>
+            <p>
+              Entrez dans l’histoire millénaire de l’Égypte en explorant les majestueuses Pyramides de Gizeh et le mythique Sphinx. Laissez-vous captiver par les trésors anciens du musée égyptien et perdez-vous dans les ruelles animées du bazar de Khan el-Khalili. Naviguez paisiblement sur le Nil en felouque et émerveillez-vous devant la Citadelle de Saladin, un joyau architectural surplombant la ville.
+            </p>
+            <!-- Liste des activités disponibles au Caire -->
+            <ul class="menu_activity" id="menu_activity_4">
+              <li>Visiter les Pyramides de Gizeh et le Sphinx</li>
+              <li>Explorer le musée égyptien</li>
+              <li>Se promener dans le bazar de Khan el-Khalili</li>
+              <li>Naviguer sur le Nil en felouque</li>
+              <li>Découvrir la Citadelle de Saladin et la mosquée de Mohammed Ali</li>
+            </ul>
+            <!-- Bouton pour voir les activités -->
+            <button id="card_content_btn_4">Voir Activités</button>
+          </div>
+        </div>
+
+        <!-- Cinquième carte de destination (Canberra) -->
+        <div class="card">
+          <div class="card_img">
+            <!-- Image de Canberra -->
+            <img src="Assets/img/img_canberra.jpg" alt="Image de Canberra" />
+          </div>
+          <div class="card_content">
+            <!-- Titre de la destination -->
+            <h3>Canberra</h3>
+            <p>
+              Découvrez Canberra, la capitale fascinante de l’Australie, où culture, histoire et nature se rencontrent. Visitez le Parlement australien et plongez dans le passé du pays au mémorial de la guerre. Promenez-vous autour du lac Burley Griffin pour une dose de détente ou explorez les expositions captivantes du musée national d’Australie. Pour les amoureux de la nature, les jardins botaniques nationaux offrent une expérience apaisante au milieu de la flore australienne.
+            </p>
+            <!-- Liste des activités disponibles à Canberra -->
+            <ul class="menu_activity" id="menu_activity_5">
+              <li>Visiter le Parlement australien</li>
+              <li>Explorer le musée national d’Australie</li>
+              <li>Se promener au lac Burley Griffin</li>
+              <li>Découvrir le mémorial australien de la guerre</li>
+              <li>Admirer les paysages au jardin botanique national australien</li>
+            </ul>
+            <!-- Bouton pour voir les activités -->
+            <button id="card_content_btn_5">Voir Activités</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section galerie photo -->
+      <section id="galerie_photo">
+        <!-- Titre de la section -->
+        <h2 class="title_section2">Galerie Photo</h2>
+        <div class="gallery-container">
+          <div class="gallery-grid">
+            <!-- Images de la galerie -->
+            <div class="gallery-item">
+              <img src="Assets/img/img_voyage_barcelone_1.png" alt="Voyage 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="Assets/img/img_voyage_canberra_1.jpg" alt="Voyage 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="Assets/img/imge_voyage_tokyo_1.jpg" alt="Voyage 3" />
+            </div>
+            <div class="gallery-item">
+              <img src="Assets/img/img_voyage_le_caire_1.jpg" alt="Voyage 4" />
+            </div>
+            <div class="gallery-item">
+              <img src="Assets/img/img_voyage_new_york_1.jpg" alt="Voyage 5" />
+            </div>
+            <div class="gallery-item">
+              <img src="Assets/img/imge_voyage_tokyo_2.jpg" alt="Voyage 6" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lien vers le fichier JavaScript pour ajouter des interactions dynamiques -->
+    <script src="Assets/js/script.js"></script>
+  </body>
 </html>
