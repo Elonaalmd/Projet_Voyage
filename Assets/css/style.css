@@ -2,10 +2,20 @@
   margin: 0;
   padding: 0;
 }
+h2{
+  font-family: "Poppins";
+  font-size: larger;
+}
+h3,p,span,li{
+  font-family: "Open Sans",sans-serif;
+}
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Partie Corentin */
 nav span {
   display: flex;
+  position: fixed;
+  width:100vw;
+  background-color: #f7f4e9;
   justify-content: flex-end;
   margin-right: 20px;
 }
@@ -23,7 +33,7 @@ a {
   font-family: "Poppins", sans-serif;
 }
 header img {
-  margin: 1em 0;
+  margin: 3em 0;
   width: 70vw;
   align-self: center;
 }
@@ -83,7 +93,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   background-color: #709791;
-  height:23vh
+  height:100%;
+  padding:1% 0;
 }
 footer span{
   font-family: "Open Sans" , sans-serif
@@ -185,14 +196,13 @@ h2 {
 /* Stylisation de la base de la card.*/
 
 .card-avis {
+    display: flex;  
     width: 300px;
-    height: 400px;
     background-color: #0C5655;
     border-radius: 10px;
     padding: 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 20px;
@@ -203,7 +213,6 @@ h2 {
 
 .card-avis img {
     width: 100px;
-    height: auto;
     object-fit: cover;
     align-self: flex-start;
     margin-bottom: 0;
@@ -214,9 +223,7 @@ h2 {
 .card-avis .text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     justify-content: flex-start;
-    flex: 1;
 }
 
 /* Je viens gérer la taille du titre */
@@ -246,7 +253,18 @@ h2 {
 
     .card-avis {
         width: 90%;
-        padding: 0;
+        padding: 20px;
+        margin: 20px 0;
+
+    }
+    .card-avis .avis{
+      font-size: 20px;
+    }
+    .card-avis h3{
+      font-size: 1.5em;
+    }
+    .card-avis .text p{
+      font-size: larger;
     }
 }
 /* Réinitialisation des marges et des paddings par défaut de tous les éléments */
@@ -298,7 +316,7 @@ main {
 .card {
   background-color: #0c5655; /* Fond de carte */
   opacity: 100%;
-  border-radius: 8%;
+  border-radius: 20px;
   color: white;
   max-width: 300px; /* Largeur maximale de la carte */
   transition: 0.3s; /* Transition pour les effets de survol */
@@ -307,7 +325,7 @@ main {
 /* Style de l'image de la carte */
 .card_img img {
   width: 100%; /* L'image occupe toute la largeur du conteneur */
-  border-radius: 8%;
+  border-radius: 20px;
   max-height: 200px;
   max-width: 300px;
 }
@@ -344,10 +362,10 @@ main {
 
   /* L'image de la carte devient plus grande sur les grands écrans */
   .card_img img {
-    max-height: 200px;
-    max-width: 500px;
+    object-fit: cover;
+    max-height: 411px;
+    max-width: 100%;
   }
-
   /* Effet au survol d'une carte (changement de couleur de fond) */
   .card:hover {
     background-color: #2f2f2f;
@@ -356,11 +374,12 @@ main {
   /* Disposition des cartes en grille pour les écrans plus larges */
   #destinations_phares {
     grid-area: b;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 5vw;
+    padding-right: 5vw;
     display: grid;
+    width: 90vw;
     grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
-    grid-gap: 30px;
+    column-gap: 5vh;
     grid-template-areas:
       "a a a"
       "b b b"
@@ -375,11 +394,10 @@ main {
   }
 
   /* Style des cartes dans la grille */
-  .card {
-    max-width: 500px;
-    max-height: 800px;
-  }
-
+.card{
+  max-width: none;
+  width: 100%;
+}
   /* Répétition du style de titre de section */
   .title_section {
     grid-area: a;
@@ -510,9 +528,9 @@ input[type="reset"] {
     color: #F9F3E4; /* Couleur du texte */
     border: none; /* Supprime la bordure */
     border-radius: 25px; /* Arrondi des coins */
-    padding: 10px 20px; /* Espacement interne */
+    padding: 0 20px; /* Espacement interne */
     font-size: 16px; /* Taille du texte */
-    font-family: Arial, sans-serif; /* Police */
+    font-family: "Poppins", sans-serif; /* Police */
     font-weight: bold; /* Texte en gras */
     cursor: pointer; /* Curseur au survol */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre */
@@ -521,4 +539,15 @@ input[type="reset"] {
 
 .devis p {
     justify-self: center;
+}
+@media (min-width: 1024px) {
+.devis p {
+  font-size: 1.5em;
+}
+.devis input{
+  height:1.5em;
+}
+input[type="reset"] {
+  padding: 0 20px;
+}
 }
